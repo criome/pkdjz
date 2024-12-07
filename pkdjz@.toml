@@ -1,0 +1,26 @@
+[atom]
+id = "pkdjz"
+version = "0.1.0"
+
+[features]
+default = ["system"]
+
+[fetch.nixpkgs]
+name = "nixpkgs"
+import = true
+
+[fetch.lib]
+name = "nixpkgs"
+subdir = "lib"
+import = true
+
+[fetch.zed]
+name = "zed"
+flake = true
+
+[fetch.omnix]
+name = "omnix"
+flake = true
+
+[backend.nix]
+fetcher = "npins"
