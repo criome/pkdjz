@@ -1,19 +1,16 @@
 {
   "pins": {
     "nixpkgs": {
-      "type": "GitRelease",
+      "type": "Git",
       "repository": {
         "type": "GitHub",
         "owner": "NixOS",
         "repo": "nixpkgs"
       },
-      "pre_releases": false,
-      "version_upper_bound": null,
-      "release_prefix": null,
-      "version": "25.05-pre",
-      "revision": "43030fa180fdac07639f4fe6a7a5ddaf5a96e0a7",
-      "url": "https://api.github.com/repos/NixOS/nixpkgs/tarball/25.05-pre",
-      "hash": "0b96wqvk3hs98dhfrmdhqmx9ibac4kjpanpd1pig19jaglanqnxr"
+      "branch": "master",
+      "revision": "9357f4f23713673f310988025d9dc261c20e70c6",
+      "url": "https://github.com/NixOS/nixpkgs/archive/9357f4f23713673f310988025d9dc261c20e70c6.tar.gz",
+      "hash": "0mr3vfnl8h0214ml7l5hsaq2g9174r3ra0hzcvlqk9kg024siwbf"
     },
     "omnix": {
       "type": "GitRelease",

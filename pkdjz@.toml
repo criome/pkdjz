@@ -17,10 +17,12 @@ import = true
 [fetch.zed]
 name = "zed"
 flake = true
+inputOverrides = ["nixpkgs"]
 
 [fetch.omnix]
 name = "omnix"
 flake = true
+inputOverrides = ["nixpkgs"]
 
 [backend.nix]
 fetcher = "npins"
