@@ -7,10 +7,10 @@
         "owner": "NixOS",
         "repo": "nixpkgs"
       },
-      "branch": "master",
-      "revision": "9357f4f23713673f310988025d9dc261c20e70c6",
-      "url": "https://github.com/NixOS/nixpkgs/archive/9357f4f23713673f310988025d9dc261c20e70c6.tar.gz",
-      "hash": "0mr3vfnl8h0214ml7l5hsaq2g9174r3ra0hzcvlqk9kg024siwbf"
+      "branch": "nixos-unstable",
+      "revision": "d70bd19e0a38ad4790d3913bf08fcbfc9eeca507",
+      "url": "https://github.com/NixOS/nixpkgs/archive/d70bd19e0a38ad4790d3913bf08fcbfc9eeca507.tar.gz",
+      "hash": "1968wcqnb5gb947js0kv17hy15nc5817ra66nj33nc532d342ig0"
     },
     "omnix": {
       "type": "GitRelease",
@@ -31,13 +31,13 @@
       "type": "Git",
       "repository": {
         "type": "GitHub",
-        "owner": "zed-industries",
+        "owner": "LiGoldragon",
         "repo": "zed"
       },
-      "branch": "main",
-      "revision": "564936e1fee313efcd4643c5e78472f6dc44ffc5",
-      "url": "https://github.com/zed-industries/zed/archive/564936e1fee313efcd4643c5e78472f6dc44ffc5.tar.gz",
-      "hash": "043wf8g1yibhvxa80w4scnfv8dr95bfxwhd4z7x6a982p3czj3j4"
+      "branch": "fix-cargo-dep",
+      "revision": "88eabf4321f82a4542031464b1e9b2323c5273fe",
+      "url": "https://github.com/LiGoldragon/zed/archive/88eabf4321f82a4542031464b1e9b2323c5273fe.tar.gz",
+      "hash": "0zb1x9r2kkinas6dahsp8452hxafdcqrqp9rpq457ic4qafif7xq"
     }
   },
   "version": 3

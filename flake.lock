@@ -1,0 +1,26 @@
+{
+  "nodes": {
+    "atom": {
+      "locked": {
+        "lastModified": 1735073992,
+        "narHash": "sha256-qbgp6EXT+AYYQs5HmT/yGiO+VpzvLoAbk2B7KNeKZC0=",
+        "owner": "LiGoldragon",
+        "repo": "atom",
+        "rev": "4bc71511305242d985b2dba0c92d7e11a201d686",
+        "type": "github"
+      },
+      "original": {
+        "owner": "LiGoldragon",
+        "repo": "atom",
+        "type": "github"
+      }
+    },
+    "root": {
+      "inputs": {
+        "atom": "atom"
+      }
+    }
+  },
+  "root": "root",
+  "version": 7
+}
