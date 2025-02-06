@@ -35,9 +35,9 @@
         "repo": "zed"
       },
       "branch": "fix-cargo-dep",
-      "revision": "932cb35fe832b054550eaa71ecd198340799d00b",
-      "url": "https://github.com/LiGoldragon/zed/archive/932cb35fe832b054550eaa71ecd198340799d00b.tar.gz",
-      "hash": "00h73lr2glw65f9811abv89d6vyp93mrim5llpgqy8r0bfms0f5s"
+      "revision": "b4af920f3e29498681b4a1d0a554fe15e054b964",
+      "url": "https://github.com/LiGoldragon/zed/archive/b4af920f3e29498681b4a1d0a554fe15e054b964.tar.gz",
+      "hash": "112nx8776ib4l7j1gyxa2kanx7da2v3vfggbk1spdzp3fpbyaa0i"
     }
   },
   "version": 3

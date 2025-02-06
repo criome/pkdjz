@@ -1,4 +1,11 @@
+let
+  filePackages = mod.mkPkgsWithNamedSrc mod.perFilePackages;
+
+  mkFlakePackage = name: src: src.packages.${system}.default;
+
+  flakePackages = std.mapAttrs mkFlakePackage { inherit (use) zed omnix; };
+
+in
 {
-  Packages = mod.mkPkgsWithNamedSrc mod.perFilePackages;
-  MkPkgsWithNamedSrc = mod.mkPkgsWithNamedSrc;
+  Packages = filePackages // flakePackages;
 }

@@ -1,24 +1,19 @@
 packageFns:
 let
-  pkgs = use.nixpkgs { inherit system; };
-
-  mkFunction =
-    { scope, function }:
-    let
-      requestedArguments = std.functionArgs function;
-      arguments = std.intersectAttrs requestedArguments scope;
-    in
-    function arguments;
+  inherit (use.nixpkgs-atom) pkgs;
 
   callPackageWithSrc =
     name: function:
     let
-      nameIsInDeps = std.hasAttr name use;
+      requestedArguments = std.functionArgs function;
+      requiresSrc = std.hasAttr "src" requestedArguments;
+      srcNameIsInUse = std.hasAttr name use;
       usedSrc.src = use.${name};
-      optionalSrc = if nameIsInDeps then usedSrc else { };
-      scope = optionalSrc;
+      optionalSrc = if (requiresSrc && srcNameIsInUse) then usedSrc else { };
+      scope = pkgs // packages // optionalSrc;
+      arguments = std.intersectAttrs requestedArguments scope;
     in
-    mkFunction { inherit scope function; };
+    function arguments;
 
   packages = std.mapAttrs callPackageWithSrc packageFns;
 

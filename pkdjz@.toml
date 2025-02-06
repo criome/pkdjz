@@ -1,28 +1,22 @@
 [atom]
 id = "pkdjz"
 version = "0.1.0"
+system = true
+propagate = true
 
-[features]
-default = ["system"]
+[std]
+features = ["lib"]
 
-[fetch.nixpkgs]
-name = "nixpkgs"
-import = true
-
-[fetch.lib]
-name = "nixpkgs"
-subdir = "lib"
-import = true
+[fetch.nixpkgs-atom]
+name = "nixpkgs-atom"
 
 [fetch.zed]
 name = "zed"
-flake = true
-inputOverrides = ["nixpkgs"]
+type = "flake"
 
 [fetch.omnix]
 name = "omnix"
-flake = true
-inputOverrides = ["nixpkgs"]
+type = "flake"
 
 [backend.nix]
-fetcher = "npins"
+fetcher = "flake-lock"
