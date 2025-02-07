@@ -8,7 +8,10 @@
     nixpkgs-atom.inputs.nixpkgs.follows = "nixpkgs";
 
     omnix.url = "github:juspay/omnix";
+    omnix.inputs.nixpkgs.follows = "nixpkgs";
+
     zed.url = "github:zed-industries/zed";
+    zed.inputs.nixpkgs.follows = "nixpkgs";
   };
 
   outputs = inputs: inputs.atom.mkAtomicFlake inputs (./. + "/pkdjz@.toml");
