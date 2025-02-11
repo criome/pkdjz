@@ -1,4 +1,5 @@
 {
+  lib,
   stdenv,
   fromYAML,
   hugo,
@@ -7,7 +8,7 @@
 { src }:
 let
   indexContentString = builtins.readFile (src + /_index.md);
-  indexSplitStrings = lib.splitString "+++\n" indexContentString;
+  indexSplitStrings = lib.splitString "---\n" indexContentString;
   indexFrontMatter = builtins.elemAt indexSplitStrings 1;
   indexData = fromYAML indexFrontMatter;
   title = indexData.title;
