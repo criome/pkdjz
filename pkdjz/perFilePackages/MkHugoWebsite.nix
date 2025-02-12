@@ -7,7 +7,7 @@
 
 { src }:
 stdenv.mkDerivation {
-  name = title + "-hugoWebsite";
+  name = "hugoWebsite";
   version = src.shortRev or "unversioned";
   inherit src;
 
