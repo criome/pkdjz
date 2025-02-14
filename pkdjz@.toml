@@ -20,3 +20,8 @@ type = "flake"
 [fetch.zed]
 name = "zed"
 type = "flake"
+
+[fetch.hugo-themes]
+name = "self"
+type = "import"
+subdir = "hugo-themes"

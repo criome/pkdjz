@@ -1,0 +1,17 @@
+{
+  "pins": {
+    "hugo-coder": {
+      "type": "Git",
+      "repository": {
+        "type": "GitHub",
+        "owner": "luizdepra",
+        "repo": "hugo-coder"
+      },
+      "branch": "main",
+      "revision": "7e776ee1bf974a322356bdfa42ccc5d4022ae50e",
+      "url": "https://github.com/luizdepra/hugo-coder/archive/7e776ee1bf974a322356bdfa42ccc5d4022ae50e.tar.gz",
+      "hash": "0z15xrm0mph1nhkr3ppyf792lxv8913y0ix16rni2ayvb7k1jlv2"
+    }
+  },
+  "version": 3
+}
