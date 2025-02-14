@@ -25,7 +25,7 @@ let
     inherit theme params;
   };
 
-  configFile = toTomlFile "hugo.toml" hugoConfig;
+  configFile = std.toFile "hugo.json" (std.toJSON hugoConfig);
 
   hugoSrcName = domain + "-hugoSrc";
 
@@ -33,7 +33,7 @@ let
     mkdir -p $out/themes
     cd $out
     ln -s ${src} ./content
-    ln -s ${configFile} ./hugo.toml
+    ln -s ${configFile} ./hugo.json
     ln -s ${themeSrc} ./themes/${theme}
   '';
 
