@@ -1,4 +1,4 @@
-packageFns:
+packageFns: additionalScope:
 let
   inherit (use.nixpkgs-atom) pkgs;
 
@@ -10,7 +10,7 @@ let
       srcNameIsInUse = std.hasAttr name use;
       usedSrc.src = use.${name};
       optionalSrc = if (requiresSrc && srcNameIsInUse) then usedSrc else { };
-      scope = pkgs // packages // optionalSrc;
+      scope = pkgs // additionalScope // packages // optionalSrc;
       arguments = std.intersectAttrs requestedArguments scope;
     in
     function arguments;
