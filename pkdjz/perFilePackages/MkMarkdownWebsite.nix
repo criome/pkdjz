@@ -15,12 +15,14 @@ let
   indexFrontMatter = builtins.elemAt indexSplitStrings 1;
   indexData = fromYAML indexFrontMatter;
 
+  params = indexData.params or { };
   theme = indexData.theme or "hugo-coder";
   themeSrc = hugo-themes.${theme};
 
   hugoConfig = {
     title = indexData.title;
     baseURL = "https://${domain}/";
+    inherit theme params;
   };
 
   configFile = toTomlFile "hugo.toml" hugoConfig;
