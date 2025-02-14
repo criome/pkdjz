@@ -5,6 +5,7 @@
   mkHugoWebsite,
   fromYAML,
   toTomlFile,
+  hugo-themes,
 }:
 
 { src, domain }:
@@ -14,21 +15,29 @@ let
   indexFrontMatter = builtins.elemAt indexSplitStrings 1;
   indexData = fromYAML indexFrontMatter;
 
+  themeName = indexData.theme or "hugo-coder";
+  themeSrc = hugo-themes.${themeName};
+
   hugoConfig = {
     title = indexData.title;
     baseURL = "https://${domain}/";
+    theme = themeName;
   };
 
   configFile = toTomlFile "hugo.toml" hugoConfig;
 
   hugoSrcName = domain + "-hugoSrc";
 
-  hugoSrc = runCommandLocal hugoSrcName { } ''
-    mkdir -p $out/
+  buildEnv = runCommandLocal hugoSrcName { } ''
+    mkdir -p $out/themes
     cd $out
     ln -s ${src} ./content
     ln -s ${configFile} ./hugo.toml
+    ln -s ${themeSrc} ./themes/${themeName}
   '';
 
+  build = mkHugoWebsite { src = buildEnv; };
 in
-mkHugoWebsite { src = hugoSrc; }
+{
+  inherit build buildEnv;
+}
