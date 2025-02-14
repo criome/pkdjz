@@ -7,16 +7,16 @@ propagate = true
 [std]
 features = ["lib"]
 
+[backend.nix]
+fetcher = "flake-lock"
+
 [fetch.nixpkgs-atom]
 name = "nixpkgs-atom"
-
-[fetch.zed]
-name = "zed"
-type = "flake"
 
 [fetch.omnix]
 name = "omnix"
 type = "flake"
 
-[backend.nix]
-fetcher = "flake-lock"
+[fetch.zed]
+name = "zed"
+type = "flake"
