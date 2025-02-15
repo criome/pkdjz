@@ -1,5 +1,17 @@
 {
   "pins": {
+    "hugo-PaperMod": {
+      "type": "Git",
+      "repository": {
+        "type": "GitHub",
+        "owner": "adityatelange",
+        "repo": "hugo-PaperMod"
+      },
+      "branch": "master",
+      "revision": "a020be2137458dd0a1f4f3a024cd7b076931e9e3",
+      "url": "https://github.com/adityatelange/hugo-PaperMod/archive/a020be2137458dd0a1f4f3a024cd7b076931e9e3.tar.gz",
+      "hash": "1b5jaa4wlj6micf3wwn89c0zq18lya0lpyra2dnk1lrc3kiqr81f"
+    },
     "hugo-coder": {
       "type": "Git",
       "repository": {
