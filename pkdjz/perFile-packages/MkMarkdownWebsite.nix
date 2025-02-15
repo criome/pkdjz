@@ -5,7 +5,7 @@
   mkHugoWebsite,
   fromYAML,
   toTomlFile,
-  hugo-themes,
+  hugoThemes,
 }:
 
 { src, domain }:
@@ -16,25 +16,29 @@ let
   indexData = fromYAML indexFrontMatter;
 
   theme = indexData.theme or "hugo-PaperMod";
-  themeSrc = hugo-themes.${theme};
+  themeDatom = hugoThemes.${theme};
 
-  hugoConfig = {
+  baseHugoConfig = {
     title = indexData.title;
     baseURL = "https://${domain}/";
     inherit theme;
   };
 
-  configFileName = "hugo.json";
-  configFile = std.toFile configFileName (std.toJSON hugoConfig);
+  themeSpecificConfig = themeDatom.mkConfig indexData;
+  hugoConfig = baseHugoConfig // themeSpecificConfig;
 
-  hugoSrcName = domain + "-hugoSrc";
+  configFileName = "hugo.json";
+  configJson = std.toJSON hugoConfig;
+  configFile = std.toFile configFileName configJson;
+
+  hugoSrcName = domain + "-hugo-BuildEnv";
 
   buildEnv = runCommandLocal hugoSrcName { } ''
     mkdir -p $out/themes
     cd $out
     ln -s ${src} ./content
     ln -s ${configFile} ./${configFileName}
-    ln -s ${themeSrc} ./themes/${theme}
+    ln -s ${themeDatom.src} ./themes/${theme}
   '';
 
   build = mkHugoWebsite { src = buildEnv; };

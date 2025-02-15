@@ -21,7 +21,7 @@ type = "flake"
 name = "zed"
 type = "flake"
 
-[fetch.hugo-themes]
+[fetch.hugo-themes-srcs]
 name = "self"
 type = "import"
-subdir = "hugo-themes"
+subdir = "hugo-themes-srcs"
