@@ -12,10 +12,14 @@
 let
   indexContentString = builtins.readFile (src + /_index.md);
   indexSplitStrings = lib.splitString "---\n" indexContentString;
-  indexFrontMatter = builtins.elemAt indexSplitStrings 1;
-  indexData = fromYAML indexFrontMatter;
+  frontmatterString = builtins.elemAt indexSplitStrings 1;
+  frontmatterData = fromYAML frontmatterString;
 
-  theme = indexData.theme or "hugo-PaperMod";
+  indexData = {
+    main = std.elemAt indexSplitStrings 2;
+  } // frontmatterData;
+
+  theme = indexData.theme or "hugo-theme-hello-friend-ng";
   themeDatom = hugoThemes.${theme};
 
   baseHugoConfig = {

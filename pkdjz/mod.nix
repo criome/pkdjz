@@ -3,7 +3,7 @@ let
   mkFlakePackage = name: src: src.packages.${system}.default;
   flakePackages = std.mapAttrs mkFlakePackage flakePackageSrcs;
 
-  hugoThemes = std.mapAttrs mod.mkHugoTheme use.hugo-themes-srcs;
+  inherit (mod.hugo) hugoThemes;
 
   nonFilePackages = flakePackages // {
     inherit hugoThemes;

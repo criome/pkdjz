@@ -23,6 +23,18 @@
       "revision": "7e776ee1bf974a322356bdfa42ccc5d4022ae50e",
       "url": "https://github.com/luizdepra/hugo-coder/archive/7e776ee1bf974a322356bdfa42ccc5d4022ae50e.tar.gz",
       "hash": "0z15xrm0mph1nhkr3ppyf792lxv8913y0ix16rni2ayvb7k1jlv2"
+    },
+    "hugo-theme-hello-friend-ng": {
+      "type": "Git",
+      "repository": {
+        "type": "GitHub",
+        "owner": "rhazdon",
+        "repo": "hugo-theme-hello-friend-ng"
+      },
+      "branch": "master",
+      "revision": "37fbce29a55302ee523671d19b62327399608852",
+      "url": "https://github.com/rhazdon/hugo-theme-hello-friend-ng/archive/37fbce29a55302ee523671d19b62327399608852.tar.gz",
+      "hash": "0g77zxqrrlh00268q8vflwgs0l83bmqbvd8gv7g2x4ri9vpswwya"
     }
   },
   "version": 3

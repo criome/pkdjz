@@ -1,7 +1,7 @@
 name: src:
 let
-  isImplemented = std.hasAttr name mod.perFile-hugo-mkConfig;
-  mkConfig = mod.perFile-hugo-mkConfig.${name};
+  isImplemented = std.hasAttr name mod.perFileMkConfig;
+  mkConfig = mod.perFileMkConfig.${name};
   result = { inherit src mkConfig; };
   errorMsg = abort "Hugo theme ${name} lacks a `mkConfig` implementation";
 
