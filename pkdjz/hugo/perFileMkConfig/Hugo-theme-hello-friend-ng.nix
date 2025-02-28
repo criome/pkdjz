@@ -1,6 +1,6 @@
 indexData:
 let
-  inherit (use.nixpkgs-atom) lib;
+  inherit (get.nixpkgs-atom) lib;
 
   mkSocial = name: value: {
     inherit name;

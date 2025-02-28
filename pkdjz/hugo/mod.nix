@@ -1,3 +1,3 @@
 {
-  HugoThemes = std.mapAttrs mod.mkHugoTheme use.hugo-themes-srcs;
+  HugoThemes = std.mapAttrs mod.mkHugoTheme get.hugo-themes-srcs;
 }

@@ -1,5 +1,5 @@
 let
-  flakePackageSrcs = { inherit (use) zed omnix; };
+  flakePackageSrcs = { inherit (get) zed omnix; };
   mkFlakePackage = name: src: src.packages.${system}.default;
   flakePackages = std.mapAttrs mkFlakePackage flakePackageSrcs;
 
