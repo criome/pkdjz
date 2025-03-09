@@ -295,6 +295,7 @@
         "nixpkgs": "nixpkgs",
         "nixpkgs-atom": "nixpkgs-atom",
         "omnix": "omnix",
+        "system": "system",
         "zed": "zed"
       }
     },
@@ -361,6 +362,21 @@
       "original": {
         "owner": "oxalica",
         "repo": "rust-overlay",
+        "type": "github"
+      }
+    },
+    "system": {
+      "locked": {
+        "lastModified": 1741519710,
+        "narHash": "sha256-lruoFLEopJlO2DnYNAMYqiV1/XNBcfQDjY31tTloD28=",
+        "owner": "criome",
+        "repo": "system",
+        "rev": "877d4dd32ecf43e9ecc09dc95c2ada988345bf77",
+        "type": "github"
+      },
+      "original": {
+        "owner": "criome",
+        "repo": "system",
         "type": "github"
       }
     },
