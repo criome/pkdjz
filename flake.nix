@@ -5,9 +5,10 @@
     atom.url = "github:LiGoldragon/atom/atomicFlake-v1";
     system.url = "github:criome/system";
 
+    nixpkgs-lib.url = "github:nix-community/nixpkgs.lib";
+    nixpkgs-lib.flake = false;
+
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
-    nixpkgs-atom.url = "github:criome/nixpkgs-atom";
-    nixpkgs-atom.inputs.nixpkgs.follows = "nixpkgs";
 
     omnix.url = "github:juspay/omnix";
     omnix.inputs.nixpkgs.follows = "nixpkgs";

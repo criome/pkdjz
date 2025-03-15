@@ -1,7 +1,5 @@
 indexData:
 let
-  inherit (get.nixpkgs-atom) lib;
-
   socialIndex = {
     telegram.url = "https://t.me/${indexData.telegram}";
   };

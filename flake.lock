@@ -2,30 +2,16 @@
   "nodes": {
     "atom": {
       "locked": {
-        "lastModified": 1740578955,
-        "narHash": "sha256-cfQd23xSpKB7AIVNjoHRcKwR/h4lJY9Syi6Mu/NWX9Y=",
+        "lastModified": 1742054527,
+        "narHash": "sha256-1gPmkuL4PPBfFUyG6GqkoP8gFz9RwscuE8tQoLV8R58=",
         "owner": "LiGoldragon",
         "repo": "atom",
-        "rev": "e9b437bf60607fdfa27e49937561b9e1f8682863",
+        "rev": "4ec32cb657b15f82a2646ab184ad53ed78c2aa11",
         "type": "github"
       },
       "original": {
         "owner": "LiGoldragon",
-        "repo": "atom",
-        "type": "github"
-      }
-    },
-    "atom_2": {
-      "locked": {
-        "lastModified": 1740578955,
-        "narHash": "sha256-cfQd23xSpKB7AIVNjoHRcKwR/h4lJY9Syi6Mu/NWX9Y=",
-        "owner": "LiGoldragon",
-        "repo": "atom",
-        "rev": "e9b437bf60607fdfa27e49937561b9e1f8682863",
-        "type": "github"
-      },
-      "original": {
-        "owner": "LiGoldragon",
+        "ref": "atomicFlake-v1",
         "repo": "atom",
         "type": "github"
       }
@@ -235,24 +221,19 @@
         "type": "github"
       }
     },
-    "nixpkgs-atom": {
-      "inputs": {
-        "atom": "atom_2",
-        "nixpkgs": [
-          "nixpkgs"
-        ]
-      },
+    "nixpkgs-lib": {
+      "flake": false,
       "locked": {
-        "lastModified": 1741090188,
-        "narHash": "sha256-r7Qp67m2JKpz568acpB/0T87Efue2qClq7+FO5774c0=",
-        "owner": "criome",
-        "repo": "nixpkgs-atom",
-        "rev": "3a317ae9550b659c42ee31363353623958bf2c63",
+        "lastModified": 1741481724,
+        "narHash": "sha256-XkDGJ3UJ06OkyHiKX20wLIyqrVl8J9ppccSevDoZYg0=",
+        "owner": "nix-community",
+        "repo": "nixpkgs.lib",
+        "rev": "4264843d949bd5fb28a96f47842b634919aa58fa",
         "type": "github"
       },
       "original": {
-        "owner": "criome",
-        "repo": "nixpkgs-atom",
+        "owner": "nix-community",
+        "repo": "nixpkgs.lib",
         "type": "github"
       }
     },
@@ -293,7 +274,7 @@
       "inputs": {
         "atom": "atom",
         "nixpkgs": "nixpkgs",
-        "nixpkgs-atom": "nixpkgs-atom",
+        "nixpkgs-lib": "nixpkgs-lib",
         "omnix": "omnix",
         "system": "system",
         "zed": "zed"

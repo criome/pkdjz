@@ -1,7 +1,5 @@
 packageFns: additionalScope:
 let
-  inherit (get.nixpkgs-atom) pkgs;
-
   callPackageWithSrc =
     name: function:
     let

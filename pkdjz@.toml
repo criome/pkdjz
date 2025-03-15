@@ -4,14 +4,20 @@ version = "0.1.0"
 system = true
 propagate = true
 
-[std]
-features = ["lib"]
+[features]
+default = ["lib", "pkgs"]
 
 [backend.nix]
 fetcher = "flake-lock"
 
-[fetch.nixpkgs-atom]
-name = "nixpkgs-atom"
+[fetch.lib]
+name = "nixpkgs-lib"
+type = "import"
+subdir = "lib"
+
+[fetch.pkgs]
+name = "nixpkgs"
+type = "pkgs"
 
 [fetch.omnix]
 name = "omnix"
